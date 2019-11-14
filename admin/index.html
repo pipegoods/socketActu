@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+</head>
+<body>
+  <div id="app">
+        <section class="hero is-primary">
+                <div class="hero-body">
+                  <div class="container">
+                    <h1 class="title">
+                     App Admin Sala Informatica
+                    </h1>
+                    <h2 class="subtitle">
+                      @ 2019 MIT 👩‍🎓
+                    </h2>
+                  </div>
+                </div>
+              </section>
+     <div class="columns">
+         <div class="column is-one-quarter">
+                <aside class="menu">
+                        <p class="menu-label">
+                          Pc conectados
+                        </p>
+                        <ul class="menu-list">
+                          <li v-for="pc in pcON"><a  v-on:click="chat(pc)">{{ pc.user }}</a></li>
+                        </ul>
+                       
+                      </aside>
+         </div>
+            <div class="column">
+                    chat con {{ pcChat.cliente }}
+                    <ul>
+                        <li v-for="mensaje in pcChat.mensajes">
+                            <b>😎: </b>
+                            <span>{{ mensaje.men }}</span>
+                        </li>
+                    </ul>
+                    <br>
+                    
+                    <input class="input" type="text" v-model="mensajeactual">
+                    <button class="button is-primary" v-on:click="enviarMensaje(pcChat)">Enviar</button>
+            </div>
+            
+           
+    </div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
