@@ -10,3 +10,5 @@ El proyecto consta de dos vistas, una del lado del cliente (usuario de la sala) 
 
 #### Lado administrador
 - ir a la carpeta **adminside** y lanzar el index.html, podemos hacerlo desde un servidor local o simplemente con doble click.
+
+##### Nota: es necesario configurar la direccion ip de la maquina host.
